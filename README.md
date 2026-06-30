@@ -16,14 +16,14 @@ TUF integrates seamlessly with **Scanpy** workflows and is compatible with any t
 
 ## Why TUF?
 
-Trajectory inference methods estimate developmental progression but generally do not quantify the confidence of those estimates. TUF complements existing trajectory inference algorithms by providing local uncertainty measures that help identify:
+Trajectory inference methods estimate developmental progression but generally do not quantify the confidence of those estimates. TUF complements existing trajectory inference algorithms by providing local uncertainty measures that help identify
 
 - Transitional cell states
 - Regions with mixed temporal identity
 - Branch points with ambiguous developmental direction
 - Cells where trajectory assignments are less reliable
 
-TUF is designed as a **post-hoc analysis framework**, allowing uncertainty quantification without modifying existing trajectory inference pipelines.
+As a **post-hoc analysis framework**, TUF can be incorporated into existing trajectory inference workflows without modifying the underlying algorithms.
 
 ---
 
@@ -33,7 +33,7 @@ TUF is designed as a **post-hoc analysis framework**, allowing uncertainty quant
 - Seamless integration with Scanpy
 - Automatic pseudotime detection
 - Graph-based uncertainty quantification
-- Publication-quality visualization functions
+- Publication-quality visualization
 - Lightweight with minimal dependencies
 - Compute TES and TDS individually or together
 
@@ -41,7 +41,7 @@ TUF is designed as a **post-hoc analysis framework**, allowing uncertainty quant
 
 ## Installation
 
-Currently, TUF can be installed directly from the GitHub repository.
+Currently, TUF can be installed directly from GitHub.
 
 ```bash
 git clone https://github.com/Sizerta/tuf_python.git
@@ -78,15 +78,13 @@ sc.tl.dpt(adata)
 # Compute trajectory uncertainty
 compute_tuf(adata)
 
-# Visualize results
+# Visualize the results
 plot_tuf(adata)
 ```
 
 ---
 
 ## Computing Individual Metrics
-
-Compute each uncertainty metric independently if desired.
 
 ```python
 from tuf import compute_tes, compute_tds
@@ -108,7 +106,7 @@ plot_tds(adata)
 
 ## Output
 
-After computation, TUF stores the uncertainty scores in `adata.obs`.
+After computation, TUF stores the following quantities in `adata.obs`.
 
 | Column | Description |
 |---------|-------------|
@@ -131,11 +129,12 @@ These scores can be used for downstream visualization, statistical analysis, and
 | `plot_tuf()` | Display TES, TDS, and pseudotime together |
 
 ---
-## Related Project
 
-The **Trajectory Uncertainty Framework (TUF)** is a standalone Python package for quantifying uncertainty in single-cell trajectory inference. It provides the reference implementation of the methodology described in the accompanying TUF manuscript and is designed for seamless integration with Scanpy workflows.
+## Related Software
 
-If your analysis is performed in Python, you may find TUF useful.
+If you work in **Julia**, you may also be interested in **SiCell.jl**, a high-performance framework for single-cell RNA-seq analysis featuring preprocessing, quality control, dimensionality reduction, clustering, trajectory inference, differential expression, visualization, and more.
+
+**SiCell.jl:** https://github.com/Sizerta/SiCell.jl
 
 ---
 
@@ -172,13 +171,13 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 
 ## Contributing
 
-Contributions are welcome. If you discover a bug, have a feature request, or would like to contribute improvements, please open an issue or submit a pull request.
+Contributions, bug reports, feature requests, and pull requests are welcome. If you encounter an issue or have suggestions for improvement, please open an issue on GitHub.
 
 ---
 
 ## Acknowledgments
 
-TUF is built upon the excellent scientific Python ecosystem, particularly:
+TUF builds upon the excellent scientific Python ecosystem, particularly
 
 - Scanpy
 - AnnData
