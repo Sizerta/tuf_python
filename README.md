@@ -131,6 +131,13 @@ These scores can be used for downstream visualization, statistical analysis, and
 | `plot_tuf()` | Display TES, TDS, and pseudotime together |
 
 ---
+## Related Project
+
+The **Trajectory Uncertainty Framework (TUF)** is a standalone Python package for quantifying uncertainty in single-cell trajectory inference. It provides the reference implementation of the methodology described in the accompanying TUF manuscript and is designed for seamless integration with Scanpy workflows.
+
+If your analysis is performed in Python, you may find TUF useful.
+
+---
 
 ## Requirements
 
